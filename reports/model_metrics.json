@@ -1,0 +1,14 @@
+{
+  "holdout_season": 2025,
+  "test_matches": 1004,
+  "model": {
+    "accuracy": 0.753,
+    "brier": 0.1665,
+    "log_loss": 0.5021
+  },
+  "elo_baseline": {
+    "accuracy": 0.754,
+    "brier": 0.1728,
+    "log_loss": 0.523
+  }
+}
