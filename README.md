@@ -5,21 +5,21 @@ Elo ratings for NCAA Division I wrestling teams, built from dual meet results an
 ## Current rankings
 
 <!-- RANKINGS:START -->
-Updated through duals on February 21, 2026. 10 D1 duals rated.
+Updated through duals on October 31, 2026. 11 D1 duals rated.
 
 | Rank | Team | Rating | Record | Last 5 | Week |
 |---:|---|---:|---|---|---|
-| 1 | Bellarmine | 1551 | 1-0 | W | same |
-| 2 | Binghamton | 1542 | 1-0 | W | same |
-| 3 | Hofstra | 1531 | 1-0 | W | same |
-| 4 | VMI | 1529 | 1-0 | W | same |
-| 5 | Franklin & Marshall | 1525 | 1-0 | W | same |
-| 6 | Morgan State | 1522 | 1-0 | W | same |
-| 7 | Brown | 1513 | 1-0 | W | new |
-| 8 | Duke | 1510 | 1-0 | W | down 1 |
-| 9 | Davidson | 1483 | 0-1 | L | down 1 |
-| 10 | Presbyterian | 1440 | 0-1 | L | down 1 |
-| 11 | Sacred Heart | 1354 | 2-8 | WLLLL | down 1 |
+| 1 | Bellarmine | 1534 | 0-0 |  | same |
+| 2 | Binghamton | 1528 | 0-0 |  | same |
+| 3 | VMI | 1520 | 0-0 |  | up 1 |
+| 4 | Franklin & Marshall | 1517 | 0-0 |  | up 1 |
+| 5 | Morgan State | 1515 | 0-0 |  | up 1 |
+| 6 | Brown | 1509 | 0-0 |  | up 1 |
+| 7 | Duke | 1506 | 0-0 |  | up 1 |
+| 8 | Hofstra | 1496 | 0-1 | L | down 5 |
+| 9 | Davidson | 1488 | 0-0 |  | same |
+| 10 | Presbyterian | 1460 | 0-0 |  | same |
+| 11 | Sacred Heart | 1427 | 1-0 | W | same |
 <!-- RANKINGS:END -->
 
 The table above is rewritten by GitHub Actions every time a result is added, and once a day during the season.

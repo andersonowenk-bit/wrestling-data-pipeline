@@ -1,12 +1,12 @@
 rank,team,rating,wins,losses,last5,last_week
-1,Bellarmine,1551,1,0,W,1.0
-2,Binghamton,1542,1,0,W,2.0
-3,Hofstra,1531,1,0,W,3.0
-4,VMI,1529,1,0,W,4.0
-5,Franklin & Marshall,1525,1,0,W,5.0
-6,Morgan State,1522,1,0,W,6.0
-7,Brown,1513,1,0,W,
-8,Duke,1510,1,0,W,7.0
-9,Davidson,1483,0,1,L,8.0
-10,Presbyterian,1440,0,1,L,9.0
-11,Sacred Heart,1354,2,8,WLLLL,10.0
+1,Bellarmine,1534,0,0,,1
+2,Binghamton,1528,0,0,,2
+3,VMI,1520,0,0,,4
+4,Franklin & Marshall,1517,0,0,,5
+5,Morgan State,1515,0,0,,6
+6,Brown,1509,0,0,,7
+7,Duke,1506,0,0,,8
+8,Hofstra,1496,0,1,L,3
+9,Davidson,1488,0,0,,9
+10,Presbyterian,1460,0,0,,10
+11,Sacred Heart,1427,1,0,W,11
