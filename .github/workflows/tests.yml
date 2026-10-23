@@ -13,8 +13,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: pip install -r requirements.txt
-      - name: Unit tests
-        run: pytest -q
-      - name: Full pipeline on sample data
-        run: make all
+      - run: pip install pandas pytest
+      - run: pytest -q

@@ -1,31 +1,6 @@
-# Python
 __pycache__/
 *.pyc
 .venv/
-venv/
 .pytest_cache/
-
-# Data (raw data and databases stay off GitHub; sample data is committed)
-data/raw/*
-!data/raw/.gitkeep
-data/*.duckdb
-data/*.duckdb.wal
-
-# Model artifacts
-models/artifacts/*
-!models/artifacts/.gitkeep
-
-# dbt
-dbt/target/
-dbt/dbt_packages/
-dbt/logs/
-logs/
-
-# Notebooks
-.ipynb_checkpoints/
-
-# OS / editor
 .DS_Store
-.vscode/
-.idea/
-dbt/.user.yml
+.ipynb_checkpoints/

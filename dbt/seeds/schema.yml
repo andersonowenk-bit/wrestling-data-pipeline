@@ -1,7 +1,0 @@
-version: 2
-seeds:
-  - name: name_aliases
-    description: Maps spelling variations of a wrestler's name to one canonical name.
-    columns:
-      - name: alias
-        tests: [unique, not_null]

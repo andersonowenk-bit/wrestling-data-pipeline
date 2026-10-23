@@ -1,9 +1,0 @@
-version: 2
-sources:
-  - name: raw
-    schema: raw
-    tables:
-      - name: matches
-        description: Match results loaded by ingest/load_csv.py
-      - name: official_rankings
-        description: Official rankings used for comparison in Phase 3
