@@ -46,15 +46,17 @@ table.rk td.big {{ font-family: 'Barlow Condensed', sans-serif; font-size: 1.15r
 </style>""", unsafe_allow_html=True)
 
 duals = load_duals()
-if duals.empty:
-    st.info("No duals on file yet. Add one with python -m teams.add, then refresh.")
-    st.stop()
 table, history = build_table(duals)
+if table.empty:
+    st.info("Nothing to rank yet. Save a WrestleStat snapshot or add a dual, then refresh.")
+    st.stop()
 elo, _ = run_elo(duals)
 
-updated = duals.date.max().strftime("%B %-d, %Y")
+season = history.season.max()
+played = int((duals.season == season).sum()) if len(duals) else 0
+updated = history.date.max().strftime("%B %-d, %Y")
 st.markdown(f"""<div class="masthead"><h1>D1 Wrestling Team Rankings</h1>
-<p>Elo ratings from {len(duals)} D1 duals, updated through {updated}.</p></div>""", unsafe_allow_html=True)
+<p>{season} season. {played} D1 duals rated so far, updated {updated}.</p></div>""", unsafe_allow_html=True)
 
 st.markdown("<h2>Predict a dual</h2>", unsafe_allow_html=True)
 teams = table.team.tolist()
@@ -97,10 +99,11 @@ def move(r):
 
 
 rows = "".join(f'<tr><td class="big">{r["rank"]}</td><td>{escape(r.team)}</td><td class="big">{r.rating}</td>'
-               f'<td>{r.wins}-{r.losses}</td><td>{dots(r.last5)}</td><td>{move(r)}</td></tr>'
+               f'<td>{r.wins}-{r.losses}</td><td>{dots(r.last5)}</td><td>{move(r)}</td>'
+               f'<td>{"" if pd.isna(r.wrestlestat) else int(r.wrestlestat)}</td></tr>'
                for _, r in table.iterrows())
 st.markdown(f"""<table class="rk"><thead><tr><th>Rank</th><th>Team</th><th>Rating</th><th>Record</th>
-<th>Last 5</th><th>This week</th></tr></thead><tbody>{rows}</tbody></table>""", unsafe_allow_html=True)
+<th>Last 5</th><th>This week</th><th>WrestleStat</th></tr></thead><tbody>{rows}</tbody></table>""", unsafe_allow_html=True)
 
 st.markdown('<h2 style="margin-top:2.2rem">Rating over time</h2>', unsafe_allow_html=True)
 pick = st.multiselect("Teams", teams, default=[t for t in ["Sacred Heart", "Hofstra"] if t in teams])

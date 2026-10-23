@@ -1,4 +1,5 @@
 """Load every dual from data/duals/<season>.csv, oldest season first."""
+from datetime import date
 from pathlib import Path
 
 import pandas as pd
@@ -6,6 +7,14 @@ import pandas as pd
 from teams.names import is_d1, normalize
 
 DUALS_DIR = Path(__file__).resolve().parents[1] / "data" / "duals"
+
+
+def season_for(d: date) -> str:
+    """Wrestling seasons run fall to spring: Oct 2026 and Feb 2027 are both 2026-27."""
+    start = d.year if d.month >= 8 else d.year - 1
+    return f"{start}-{str(start + 1)[-2:]}"
+
+
 COLUMNS = ["date", "home", "away", "home_score", "away_score", "neutral", "winner", "event"]
 
 

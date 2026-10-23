@@ -10,8 +10,7 @@ Run: python -m teams.fetch
 """
 import csv
 
-from teams.add import season_for
-from teams.data import COLUMNS, DUALS_DIR
+from teams.data import COLUMNS, DUALS_DIR, season_for
 from teams.names import normalize
 from datetime import date
 

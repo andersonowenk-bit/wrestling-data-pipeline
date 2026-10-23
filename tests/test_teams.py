@@ -53,6 +53,9 @@ def test_rank_table():
         {"date": pd.Timestamp("2026-11-10"), "home": "B", "away": "C", "home_score": 20, "away_score": 15,
          "neutral": False, "winner": "", "event": "", "season": "2026-27"},
     ])
+    import teams.rank as rank
+    rank.season_priors = lambda: {}
+    rank.latest_ranks = lambda: {}
     table, _ = build_table(duals)
     assert table.iloc[0].team == "A"
     assert table.set_index("team").loc["B", "wins"] == 1

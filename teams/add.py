@@ -10,13 +10,8 @@ import csv
 from datetime import date
 
 from teams import rank
-from teams.data import COLUMNS, DUALS_DIR
+from teams.data import COLUMNS, DUALS_DIR, season_for
 from teams.names import normalize
-
-
-def season_for(d: date) -> str:
-    start = d.year if d.month >= 8 else d.year - 1
-    return f"{start}-{str(start + 1)[-2:]}"
 
 
 def main():

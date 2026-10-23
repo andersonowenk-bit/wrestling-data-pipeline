@@ -1,12 +1,12 @@
-rank,team,rating,wins,losses,last5,last_week
-1,Bellarmine,1534,0,0,,1
-2,Binghamton,1528,0,0,,2
-3,VMI,1520,0,0,,4
-4,Franklin & Marshall,1517,0,0,,5
-5,Morgan State,1515,0,0,,6
-6,Brown,1509,0,0,,7
-7,Duke,1506,0,0,,8
-8,Hofstra,1496,0,1,L,3
-9,Davidson,1488,0,0,,9
-10,Presbyterian,1460,0,0,,10
-11,Sacred Heart,1427,1,0,W,11
+rank,team,rating,wins,losses,last5,last_week,wrestlestat
+1,Bellarmine,1534,0,0,,1,
+2,Binghamton,1528,0,0,,2,
+3,VMI,1520,0,0,,4,
+4,Franklin & Marshall,1517,0,0,,5,
+5,Morgan State,1515,0,0,,6,
+6,Brown,1509,0,0,,7,
+7,Duke,1506,0,0,,8,
+8,Hofstra,1496,0,1,L,3,
+9,Davidson,1488,0,0,,9,
+10,Presbyterian,1460,0,0,,10,
+11,Sacred Heart,1427,1,0,W,11,
