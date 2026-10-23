@@ -1,0 +1,21 @@
+version: 2
+models:
+  - name: wrestlers
+    columns:
+      - name: wrestler_id
+        tests: [unique, not_null]
+  - name: matches
+    columns:
+      - name: match_id
+        tests: [unique, not_null]
+  - name: results
+    columns:
+      - name: match_id
+        tests: [unique, not_null]
+      - name: winner_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('wrestlers')
+              field: wrestler_id
+  - name: weight_classes

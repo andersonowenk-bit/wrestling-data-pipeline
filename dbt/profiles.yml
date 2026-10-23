@@ -1,0 +1,7 @@
+wrestling:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: ../data/wrestling.duckdb
+      threads: 4
