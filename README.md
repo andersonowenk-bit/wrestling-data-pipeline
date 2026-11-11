@@ -13,17 +13,17 @@ Updated October 31, 2026. 2026-27 season, 1 D1 duals rated so far.
 
 | Rank | Team | Rating | Record | Last 5 | Week | WrestleStat |
 |---:|---|---:|---|---|---|---:|
-| 1 | Bellarmine | 1534 | 0-0 |  | same |  |
-| 2 | Binghamton | 1528 | 0-0 |  | same |  |
-| 3 | VMI | 1520 | 0-0 |  | up 1 |  |
-| 4 | Franklin & Marshall | 1517 | 0-0 |  | up 1 |  |
-| 5 | Morgan State | 1515 | 0-0 |  | up 1 |  |
-| 6 | Brown | 1509 | 0-0 |  | up 1 |  |
-| 7 | Duke | 1506 | 0-0 |  | up 1 |  |
-| 8 | Hofstra | 1496 | 0-1 | L | down 5 |  |
+| 1 | Hofstra | 1549 | 1-0 | W | up 2 |  |
+| 2 | Bellarmine | 1534 | 0-0 |  | down 1 |  |
+| 3 | Binghamton | 1528 | 0-0 |  | down 1 |  |
+| 4 | VMI | 1520 | 0-0 |  | same |  |
+| 5 | Franklin & Marshall | 1517 | 0-0 |  | same |  |
+| 6 | Morgan State | 1515 | 0-0 |  | same |  |
+| 7 | Brown | 1509 | 0-0 |  | same |  |
+| 8 | Duke | 1506 | 0-0 |  | same |  |
 | 9 | Davidson | 1488 | 0-0 |  | same |  |
 | 10 | Presbyterian | 1460 | 0-0 |  | same |  |
-| 11 | Sacred Heart | 1427 | 1-0 | W | same |  |
+| 11 | Sacred Heart | 1373 | 0-1 | L | same |  |
 <!-- RANKINGS:END -->
 
 The table above is rewritten by GitHub Actions every time a result is added, and once a day during the season.
