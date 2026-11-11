@@ -1,6 +1,10 @@
 # D1 Wrestling Team Rankings
 
-Elo ratings for NCAA Division I wrestling teams, built from dual meet results and updated automatically through the season. Built by a D1 wrestler at Sacred Heart University.
+Elo ratings for NCAA Division I wrestling teams, built from dual meet results. I enter results by hand and GitHub Actions re-ranks the teams after every change. Built by a D1 wrestler at Sacred Heart University.
+
+## Status
+
+This is early. Right now the only duals on file are Sacred Heart's, so the only teams rated are the ones Sacred Heart has wrestled. The WrestleStat comparison is written but not switched on yet, which is why that column is blank. Pulling results in automatically is not built.
 
 ## Current rankings
 
@@ -35,7 +39,7 @@ Duals against non-D1 opponents (listed in `data/non_d1.txt`) are kept in the dat
 ## Add a result
 
 ~~~bash
-python -m teams.add --home Hofstra --away "Sacred Heart" --score 21-15 --date 2026-10-31
+python -m teams.add --home Hofstra --away "Sacred Heart" --score 35-7 --date 2026-10-31
 ~~~
 
 The score is always home first. For a neutral site add `--neutral`. For a tied dual decided on criteria add `--winner "Team"`. You can also edit `data/duals/<season>.csv` directly, including from the GitHub app on a phone, and the rankings update on their own.

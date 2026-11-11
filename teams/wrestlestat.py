@@ -92,7 +92,7 @@ def latest_ranks() -> dict:
 
 def main():
     url = sys.argv[1] if len(sys.argv) > 1 else (URL_FILE.read_text().strip() if URL_FILE.exists() else "")
-    if not url:
+    if not url.startswith("http"):
         print(__doc__)
         return
     SNAP_DIR.mkdir(parents=True, exist_ok=True)
