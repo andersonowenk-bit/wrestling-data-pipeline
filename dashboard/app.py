@@ -9,6 +9,7 @@ import pandas as pd
 import streamlit as st
 
 from teams.data import load_duals
+from teams.names import display_name
 from teams.rank import build_table, movement, run_elo
 
 st.set_page_config(page_title="D1 Wrestling Team Rankings", layout="wide")
@@ -61,15 +62,18 @@ st.markdown(f"""<div class="masthead"><h1>D1 Wrestling Team Rankings</h1>
 st.markdown("<h2>Predict a dual</h2>", unsafe_allow_html=True)
 teams = table.team.tolist()
 c1, c2, c3 = st.columns([2, 2, 1.4])
-first = c1.selectbox("Team", teams, index=teams.index("Sacred Heart") if "Sacred Heart" in teams else 0)
-second = c2.selectbox("Opponent", teams, index=teams.index("Hofstra") if "Hofstra" in teams else 1)
-site = c3.selectbox("Where", [f"At {second}", f"At {first}", "Neutral"])
-home = second if site == f"At {second}" else first if site == f"At {first}" else None
+first = c1.selectbox("Team", teams, index=teams.index("Sacred Heart") if "Sacred Heart" in teams else 0,
+                     format_func=display_name)
+second = c2.selectbox("Opponent", teams, index=teams.index("Hofstra") if "Hofstra" in teams else 1,
+                      format_func=display_name)
+site = c3.selectbox("Where", [second, first, None],
+                    format_func=lambda t: f"At {display_name(t)}" if t else "Neutral")
+home = site
 
 
 def side(team, color, cls=""):
     r = table.set_index("team").loc[team]
-    return (f'<div class="side {cls}" style="--c:{color}"><div class="name">{escape(team)}</div>'
+    return (f'<div class="side {cls}" style="--c:{color}"><div class="name">{escape(display_name(team))}</div>'
             f'<div class="meta">No. {r["rank"]} &nbsp; Rating {r.rating}</div>'
             f'<div class="meta">{r.wins}-{r.losses} this season</div></div>')
 
@@ -78,7 +82,7 @@ if first == second:
     st.info("Pick two different teams.")
 else:
     p = elo.win_probability(first, second, home)
-    where = f"at {home}" if home else "on a neutral mat"
+    where = f"at {display_name(home)}" if home else "on a neutral mat"
     st.markdown(f"""<div class="card">{side(first, RED)}
 <div class="odds"><div class="pct"><span style="color:{RED}">{p:.0%}</span> <span style="color:#C9D1DB">/</span> <span style="color:{GREEN}">{1-p:.0%}</span></div>
 <div class="sub">Win probability {where}</div>
@@ -98,7 +102,7 @@ def move(r):
     return f'<span class="{cls}">{m}</span>'
 
 
-rows = "".join(f'<tr><td class="big">{r["rank"]}</td><td>{escape(r.team)}</td><td class="big">{r.rating}</td>'
+rows = "".join(f'<tr><td class="big">{r["rank"]}</td><td>{escape(r.school)}</td><td class="big">{r.rating}</td>'
                f'<td>{r.wins}-{r.losses}</td><td>{dots(r.last5)}</td><td>{move(r)}</td>'
                f'<td>{"" if pd.isna(r.wrestlestat) else int(r.wrestlestat)}</td></tr>'
                for _, r in table.iterrows())
@@ -106,7 +110,9 @@ st.markdown(f"""<table class="rk"><thead><tr><th>Rank</th><th>Team</th><th>Ratin
 <th>Last 5</th><th>This week</th><th>WrestleStat</th></tr></thead><tbody>{rows}</tbody></table>""", unsafe_allow_html=True)
 
 st.markdown('<h2 style="margin-top:2.2rem">Rating over time</h2>', unsafe_allow_html=True)
-pick = st.multiselect("Teams", teams, default=[t for t in ["Sacred Heart", "Hofstra"] if t in teams])
+pick = st.multiselect("Teams", teams, default=[t for t in ["Sacred Heart", "Hofstra"] if t in teams],
+                      format_func=display_name)
 if pick:
     chart = history[history.team.isin(pick)].pivot_table(index="date", columns="team", values="rating").ffill()
+    chart = chart.rename(columns=display_name)
     st.line_chart(chart, color=[RED, GREEN, NAVY, "#5B6B82", "#F2C94C"][:len(pick)])

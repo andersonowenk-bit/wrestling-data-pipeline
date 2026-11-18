@@ -6,7 +6,7 @@ Elo ratings for NCAA Division I wrestling teams, built from dual meet results. I
 
 ## Status
 
-This is early. Right now the only duals on file are Sacred Heart's, so the only teams rated are the ones Sacred Heart has wrestled. The WrestleStat comparison is written but not switched on yet, which is why that column is blank. Pulling results in automatically is not built.
+Every D1 dual of the 2026-27 season through November 16 is on file, entered by hand from public box scores. Pulling results in automatically is not built. The WrestleStat comparison is written but not switched on yet, which is why that column is blank.
 
 ## Current rankings
 
@@ -46,9 +46,9 @@ The table above is rewritten by GitHub Actions every time a result is added, and
 
 ## How the ratings work
 
-Every team starts at 1500. After each dual, the winner takes points from the loser. How many depends on two things: how surprising the result was (beating a higher-rated team is worth more) and the margin (a 30-6 win moves ratings more than 18-16, damped for heavy favorites so blowouts of weak teams don't inflate a rating). The home team gets a 25-point edge in the prediction, so road wins count a little more. Between seasons, ratings keep two thirds of their distance from average, since rosters turn over.
+After each dual, the winner takes points from the loser. How many depends on two things: how surprising the result was (beating a higher-rated team is worth more) and the margin (a 30-6 win moves ratings more than 18-16, damped for heavy favorites so blowouts of weak teams don't inflate a rating). The home team gets a 25-point edge in the prediction, so road wins count a little more. Between seasons, ratings keep two thirds of their distance from average, since rosters turn over.
 
-Each season starts from WrestleStat's preseason team order: the first snapshot of the season sets every D1 team's starting rating (No. 1 at 1700 down to the last team at 1300), blended evenly with last season's carryover. From then on only dual results move the ratings, so the table becomes this model's own view as the season goes. The WrestleStat column shows their current rank for comparison, and the places where the two disagree are the interesting part.
+Teams don't all start equal. Each season's starting rating comes from two things, averaged: where the team placed at last season's NCAA Championships, and where it sat in the NWCA preseason coaches poll. Each of those is turned into a rating on a straight line from 1700 for No. 1 down to 1300 for last place, and teams that didn't score at NCAAs or get poll votes start at the bottom. That starting point is blended evenly with last season's carryover where there is one. From then on only dual results move the ratings, so early in the season the table leans on last year, and as duals pile up it becomes this model's own view. The inputs and sources are in `data/priors/`.
 
 Duals against non-D1 opponents (listed in `data/non_d1.txt`) are kept in the data but left out of the ratings.
 
@@ -84,7 +84,7 @@ dashboard/         Streamlit dashboard
 
 ## Data and limitations
 
-Rankings are only as complete as the results on file. The 2025-26 file starts with Sacred Heart's duals from the team's public schedule. The preseason snapshot puts all D1 teams on the board, but ratings only move when duals are on file. Automatic dual results plug into `teams/fetch.py` once permission to use a source is in place.
+Rankings are only as complete as the results on file. The 2025-26 file only has Sacred Heart's duals, from the team's public schedule, so last season's carryover covers just those teams. 2026-27 results come from FloWrestling's weekly D1 box scores, checked against PodiumPursuit's D1 scores page, with home sites from each school's schedule. Full school names shown in the tables come from `data/school_names.csv`. Automatic dual results plug into `teams/fetch.py` once permission to use a source is in place.
 
 ## License
 

@@ -16,16 +16,19 @@ import pandas as pd
 
 from teams.data import load_duals
 from teams.elo import TeamElo
+from teams.names import display_name
+from teams.priors import file_priors
 from teams.wrestlestat import latest_ranks, season_priors
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "rankings"
 START, END = "<!-- RANKINGS:START -->", "<!-- RANKINGS:END -->"
-PRIOR_WEIGHT = 0.5  # how much the preseason snapshot counts vs last season's carryover
+PRIOR_WEIGHT = 0.5  # how much the preseason prior counts vs last season's carryover
 
 
 def run_elo(duals: pd.DataFrame):
-    priors = season_priors()
+    first_dual = duals.groupby("season")["date"].min().to_dict() if len(duals) else {}
+    priors = {**season_priors(), **file_priors(first_dual)}  # a priors file wins over a snapshot
     seasons = sorted(set(duals.season) | set(priors))
     elo, history = TeamElo(), []
     for i, season in enumerate(seasons):
@@ -83,7 +86,8 @@ def build_table(duals: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
         table["last_week"] = pd.NA
     table["wrestlestat"] = table["team"].map(latest_ranks())
     table["rating"] = table["rating"].round(0).astype(int)
-    cols = ["rank", "team", "rating", "wins", "losses", "last5", "last_week", "wrestlestat"]
+    table["school"] = table["team"].map(display_name)
+    cols = ["rank", "team", "school", "rating", "wins", "losses", "last5", "last_week", "wrestlestat"]
     return table[cols], history
 
 
@@ -103,7 +107,7 @@ def markdown(table: pd.DataFrame, history: pd.DataFrame, duals: pd.DataFrame, n:
              "|---:|---|---:|---|---|---|---:|"]
     for _, r in table.head(n).iterrows():
         ws = "" if pd.isna(r.wrestlestat) else int(r.wrestlestat)
-        lines.append(f"| {r['rank']} | {r.team} | {r.rating} | {r.wins}-{r.losses} | {r.last5} "
+        lines.append(f"| {r['rank']} | {r.school} | {r.rating} | {r.wins}-{r.losses} | {r.last5} "
                      f"| {movement(r)} | {ws} |")
     return "\n".join(lines)
 

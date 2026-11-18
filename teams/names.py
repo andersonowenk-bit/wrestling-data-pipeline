@@ -41,3 +41,19 @@ def normalize(name: str) -> str:
 
 def is_d1(team: str) -> bool:
     return team.lower() not in NON_D1
+
+
+def _school_names() -> dict:
+    path = DATA / "school_names.csv"
+    if not path.exists():
+        return {}
+    with open(path) as f:
+        return {r["team"].strip(): r["school"].strip() for r in csv.DictReader(f)}
+
+
+SCHOOL_NAMES = _school_names()
+
+
+def display_name(team: str) -> str:
+    """'Iowa' -> 'University of Iowa'. Falls back to the short name."""
+    return SCHOOL_NAMES.get(team, team)

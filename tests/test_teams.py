@@ -55,7 +55,44 @@ def test_rank_table():
     ])
     import teams.rank as rank
     rank.season_priors = lambda: {}
+    rank.file_priors = lambda first_dual=None: {}
     rank.latest_ranks = lambda: {}
     table, _ = build_table(duals)
     assert table.iloc[0].team == "A"
     assert table.set_index("team").loc["B", "wins"] == 1
+
+
+def test_rank_to_rating_endpoints():
+    from teams.priors import rank_to_rating
+    from teams.wrestlestat import BOTTOM, TOP
+    assert rank_to_rating(1, 50) == TOP
+    assert rank_to_rating(50, 50) == BOTTOM
+    assert rank_to_rating(80, 50) == BOTTOM
+    assert TOP > rank_to_rating(10, 50) > rank_to_rating(20, 50) > BOTTOM
+
+
+def test_priors_blend_ncaa_finish_and_poll():
+    from teams.priors import blended
+    from teams.wrestlestat import BOTTOM, TOP
+    df = pd.DataFrame({"team": ["A", "B", "C", "D"], "ncaa_place": ["1", "2", "3", ""],
+                       "poll_rank": ["1", "3", "", ""]})
+    r = blended(df)
+    assert r["A"] == TOP                 # first in both
+    assert r["D"] == BOTTOM              # didn't score, no votes
+    assert r["A"] > r["B"] > r["C"] > r["D"]
+
+
+def test_priors_put_last_seasons_best_teams_on_top():
+    from teams.priors import blended, PRIORS_DIR
+    path = PRIORS_DIR / "2026-27.csv"
+    r = blended(pd.read_csv(path, dtype=str))
+    top = sorted(r, key=r.get, reverse=True)[:2]
+    assert top == ["Penn State", "Oklahoma State"]
+
+
+def test_every_team_in_the_data_has_a_school_name():
+    from teams.data import load_duals
+    from teams.names import SCHOOL_NAMES
+    duals = load_duals(d1_only=False)
+    missing = sorted((set(duals.home) | set(duals.away)) - set(SCHOOL_NAMES))
+    assert not missing, f"add these to data/school_names.csv: {missing}"
