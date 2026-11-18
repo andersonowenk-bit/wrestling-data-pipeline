@@ -5,8 +5,15 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
+import importlib
+
 import pandas as pd
 import streamlit as st
+
+# Streamlit only reloads code inside dashboard/, so after a push it can keep the
+# old teams/ modules in memory. Reload them, dependencies first, on every run.
+for _name in ("names", "elo", "data", "wrestlestat", "priors", "rank"):
+    importlib.reload(importlib.import_module(f"teams.{_name}"))
 
 from teams.data import load_duals
 from teams.names import display_name
