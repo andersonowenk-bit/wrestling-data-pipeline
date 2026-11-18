@@ -15,31 +15,31 @@ Updated November 16, 2026. 2026-27 season, 75 D1 duals rated so far.
 
 | Rank | Team | Rating | Record | Last 5 | Week | WrestleStat |
 |---:|---|---:|---|---|---|---:|
-| 1 | Iowa State | 1658 | 4-0 | WWWW | up 3 |  |
-| 2 | Penn State | 1623 | 2-0 | WW | new |  |
-| 3 | West Virginia | 1620 | 3-0 | WWW | up 5 |  |
-| 4 | Purdue | 1612 | 3-0 | WWW | down 3 |  |
-| 5 | Michigan | 1608 | 2-0 | WW | up 1 |  |
-| 6 | Rutgers | 1606 | 3-0 | WWW | down 4 |  |
-| 7 | Princeton | 1605 | 3-0 | WWW | new |  |
-| 8 | American | 1600 | 3-0 | WWW | down 3 |  |
-| 9 | Oklahoma State | 1594 | 2-0 | WW | up 2 |  |
-| 10 | Illinois | 1592 | 2-0 | WW | same |  |
-| 11 | Pittsburgh | 1591 | 2-0 | WW | new |  |
-| 12 | Appalachian State | 1585 | 2-0 | WW | down 9 |  |
-| 13 | Army | 1582 | 2-0 | WW | up 1 |  |
-| 14 | Stanford | 1571 | 2-0 | WW | new |  |
-| 15 | Iowa | 1562 | 1-0 | W | new |  |
-| 16 | Virginia Tech | 1552 | 1-0 | W | down 4 |  |
-| 17 | South Dakota State | 1549 | 1-0 | W | down 2 |  |
-| 18 | Cal Poly | 1545 | 1-0 | W | new |  |
-| 19 | SIU Edwardsville | 1544 | 1-0 | W | new |  |
-| 20 | Virginia | 1543 | 1-0 | W | down 4 |  |
-| 21 | Ohio State | 1538 | 1-0 | W | new |  |
-| 22 | NC State | 1536 | 1-0 | W | new |  |
-| 23 | Bucknell | 1534 | 2-1 | LWW | up 9 |  |
-| 24 | Chattanooga | 1530 | 2-1 | WWL | new |  |
-| 25 | Northern Illinois | 1528 | 1-0 | W | new |  |
+| 1 | Pennsylvania State University | 1758 | 2-0 | WW | up 3 |  |
+| 2 | Oklahoma State University | 1756 | 2-0 | WW | same |  |
+| 3 | Iowa State University | 1748 | 4-0 | WWWW | up 2 |  |
+| 4 | Stanford University | 1704 | 2-0 | WW | up 5 |  |
+| 5 | Virginia Tech | 1704 | 1-0 | W | down 2 |  |
+| 6 | University of Michigan | 1703 | 2-0 | WW | up 2 |  |
+| 7 | University of Iowa | 1703 | 1-0 | W | down 1 |  |
+| 8 | Ohio State University | 1698 | 1-0 | W | down 1 |  |
+| 9 | University of Nebraska-Lincoln | 1676 | 1-1 | WL | down 8 |  |
+| 10 | University of Minnesota | 1655 | 0-0 |  | same |  |
+| 11 | North Carolina State University | 1653 | 1-0 | W | up 1 |  |
+| 12 | University of Illinois Urbana-Champaign | 1645 | 2-0 | WW | up 1 |  |
+| 13 | University of Missouri | 1633 | 0-0 |  | down 2 |  |
+| 14 | West Virginia University | 1629 | 3-0 | WWW | up 6 |  |
+| 15 | Arizona State University | 1627 | 0-0 |  | down 1 |  |
+| 16 | Princeton University | 1625 | 3-0 | WWW | up 8 |  |
+| 17 | Rutgers University | 1623 | 3-0 | WWW | up 1 |  |
+| 18 | Cornell University | 1618 | 0-0 |  | down 2 |  |
+| 19 | Purdue University | 1616 | 3-0 | WWW | down 2 |  |
+| 20 | Lehigh University | 1602 | 1-2 | LWL | down 5 |  |
+| 21 | University of Pittsburgh | 1600 | 2-0 | WW | up 6 |  |
+| 22 | University of Arkansas at Little Rock | 1578 | 1-0 | W | same |  |
+| 23 | University of Pennsylvania | 1572 | 1-1 | LW | same |  |
+| 24 | American University | 1564 | 3-0 | WWW | up 5 |  |
+| 25 | University of North Carolina at Chapel Hill | 1564 | 0-0 |  | up 1 |  |
 <!-- RANKINGS:END -->
 
 The table above is rewritten by GitHub Actions every time a result is added, and once a day during the season.
