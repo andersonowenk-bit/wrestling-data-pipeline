@@ -2,6 +2,8 @@
 
 Elo ratings for NCAA Division I wrestling teams, built from dual meet results. I enter results by hand and GitHub Actions re-ranks the teams after every change. Built by a D1 wrestler at Sacred Heart University.
 
+**Live dashboard:** [wrestling-data-pipeline-kka2nqqhuvsszmtkgbh4y5.streamlit.app](https://wrestling-data-pipeline-kka2nqqhuvsszmtkgbh4y5.streamlit.app)
+
 ## Status
 
 This is early. Right now the only duals on file are Sacred Heart's, so the only teams rated are the ones Sacred Heart has wrestled. The WrestleStat comparison is written but not switched on yet, which is why that column is blank. Pulling results in automatically is not built.
