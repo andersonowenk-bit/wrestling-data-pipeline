@@ -69,3 +69,7 @@ dashboard/         Streamlit dashboard
 ## Data and limitations
 
 Rankings are only as complete as the results on file. The 2025-26 file starts with Sacred Heart's duals from the team's public schedule. The preseason snapshot puts all D1 teams on the board, but ratings only move when duals are on file. Automatic dual results plug into `teams/fetch.py` once permission to use a source is in place.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
