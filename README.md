@@ -9,21 +9,22 @@ This is early. Right now the only duals on file are Sacred Heart's, so the only 
 ## Current rankings
 
 <!-- RANKINGS:START -->
-Updated October 31, 2026. 2026-27 season, 1 D1 duals rated so far.
+Updated November 14, 2026. 2026-27 season, 3 D1 duals rated so far.
 
 | Rank | Team | Rating | Record | Last 5 | Week | WrestleStat |
 |---:|---|---:|---|---|---|---:|
-| 1 | Hofstra | 1549 | 1-0 | W | up 2 |  |
+| 1 | Hofstra | 1549 | 1-0 | W | up 1 |  |
 | 2 | Bellarmine | 1534 | 0-0 |  | down 1 |  |
-| 3 | Binghamton | 1528 | 0-0 |  | down 1 |  |
-| 4 | VMI | 1520 | 0-0 |  | same |  |
-| 5 | Franklin & Marshall | 1517 | 0-0 |  | same |  |
-| 6 | Morgan State | 1515 | 0-0 |  | same |  |
-| 7 | Brown | 1509 | 0-0 |  | same |  |
-| 8 | Duke | 1506 | 0-0 |  | same |  |
-| 9 | Davidson | 1488 | 0-0 |  | same |  |
-| 10 | Presbyterian | 1460 | 0-0 |  | same |  |
-| 11 | Sacred Heart | 1373 | 0-1 | L | same |  |
+| 3 | Binghamton | 1528 | 0-0 |  | same |  |
+| 4 | Davidson | 1523 | 1-0 | W | up 5 |  |
+| 5 | VMI | 1520 | 0-0 |  | down 1 |  |
+| 6 | Franklin & Marshall | 1517 | 0-0 |  | down 1 |  |
+| 7 | Morgan State | 1515 | 0-0 |  | down 1 |  |
+| 8 | Brown | 1509 | 0-0 |  | down 1 |  |
+| 9 | Duke | 1506 | 0-0 |  | down 1 |  |
+| 10 | LIU | 1470 | 0-1 | L | same |  |
+| 11 | Presbyterian | 1460 | 0-0 |  | same |  |
+| 12 | Sacred Heart | 1369 | 1-2 | LWL | same |  |
 <!-- RANKINGS:END -->
 
 The table above is rewritten by GitHub Actions every time a result is added, and once a day during the season.
