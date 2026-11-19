@@ -15,7 +15,7 @@ Updated November 16, 2026. 2026-27 season, 75 D1 duals rated so far.
 
 | Rank | Team | Rating | Record | Last 5 | Week | WrestleStat |
 |---:|---|---:|---|---|---|---:|
-| 1 | Pennsylvania State University | 1758 | 2-0 | WW | up 3 |  |
+| 1 | Penn State | 1758 | 2-0 | WW | up 3 |  |
 | 2 | Oklahoma State University | 1756 | 2-0 | WW | same |  |
 | 3 | Iowa State University | 1748 | 4-0 | WWWW | up 2 |  |
 | 4 | Stanford University | 1704 | 2-0 | WW | up 5 |  |
@@ -23,23 +23,23 @@ Updated November 16, 2026. 2026-27 season, 75 D1 duals rated so far.
 | 6 | University of Michigan | 1703 | 2-0 | WW | up 2 |  |
 | 7 | University of Iowa | 1703 | 1-0 | W | down 1 |  |
 | 8 | Ohio State University | 1698 | 1-0 | W | down 1 |  |
-| 9 | University of Nebraska-Lincoln | 1676 | 1-1 | WL | down 8 |  |
+| 9 | University of Nebraska | 1676 | 1-1 | WL | down 8 |  |
 | 10 | University of Minnesota | 1655 | 0-0 |  | same |  |
-| 11 | North Carolina State University | 1653 | 1-0 | W | up 1 |  |
+| 11 | NC State | 1653 | 1-0 | W | up 1 |  |
 | 12 | University of Illinois Urbana-Champaign | 1645 | 2-0 | WW | up 1 |  |
-| 13 | University of Missouri | 1633 | 0-0 |  | down 2 |  |
-| 14 | West Virginia University | 1629 | 3-0 | WWW | up 6 |  |
+| 13 | Mizzou | 1633 | 0-0 |  | down 2 |  |
+| 14 | West Virginia | 1629 | 3-0 | WWW | up 6 |  |
 | 15 | Arizona State University | 1627 | 0-0 |  | down 1 |  |
 | 16 | Princeton University | 1625 | 3-0 | WWW | up 8 |  |
-| 17 | Rutgers University | 1623 | 3-0 | WWW | up 1 |  |
-| 18 | Cornell University | 1618 | 0-0 |  | down 2 |  |
-| 19 | Purdue University | 1616 | 3-0 | WWW | down 2 |  |
-| 20 | Lehigh University | 1602 | 1-2 | LWL | down 5 |  |
-| 21 | University of Pittsburgh | 1600 | 2-0 | WW | up 6 |  |
-| 22 | University of Arkansas at Little Rock | 1578 | 1-0 | W | same |  |
-| 23 | University of Pennsylvania | 1572 | 1-1 | LW | same |  |
+| 17 | Rutgers | 1623 | 3-0 | WWW | up 1 |  |
+| 18 | Cornell | 1618 | 0-0 |  | down 2 |  |
+| 19 | Purdue | 1616 | 3-0 | WWW | down 2 |  |
+| 20 | Lehigh | 1602 | 1-2 | LWL | down 5 |  |
+| 21 | Pitt | 1600 | 2-0 | WW | up 6 |  |
+| 22 | Little Rock | 1578 | 1-0 | W | same |  |
+| 23 | UPenn | 1572 | 1-1 | LW | same |  |
 | 24 | American University | 1564 | 3-0 | WWW | up 5 |  |
-| 25 | University of North Carolina at Chapel Hill | 1564 | 0-0 |  | up 1 |  |
+| 25 | UNC Chapel Hill | 1564 | 0-0 |  | up 1 |  |
 <!-- RANKINGS:END -->
 
 The table above is rewritten by GitHub Actions every time a result is added, and once a day during the season.
