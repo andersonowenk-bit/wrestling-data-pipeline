@@ -6,7 +6,7 @@ Elo ratings for NCAA Division I wrestling teams, built from dual meet results. I
 
 ## Status
 
-Every D1 dual of the 2026-27 season through November 16 is on file, entered by hand from public box scores. Pulling results in automatically is not built. The WrestleStat comparison is written but not switched on yet, which is why that column is blank.
+Every D1 dual of the 2026-27 season through November 16 was entered by hand from public box scores. From here a daily results agent finds new duals each morning, and `teams/ingest.py` checks every one before it is saved (known teams only, current season, no future dates, real scores, a source link), so a bad result can't move the ratings. Each saved dual's source link is kept in `data/sources/`. The WrestleStat comparison is written but not switched on yet, which is why that column is blank.
 
 ## Current rankings
 
@@ -53,6 +53,8 @@ Teams don't all start equal. Each season's starting rating comes from two things
 Duals against non-D1 opponents (listed in `data/non_d1.txt`) are kept in the data but left out of the ratings.
 
 ## Add a result
+
+The daily agent does this automatically. To add one by hand:
 
 ~~~bash
 python -m teams.add --home Hofstra --away "Sacred Heart" --score 35-7 --date 2026-10-31
